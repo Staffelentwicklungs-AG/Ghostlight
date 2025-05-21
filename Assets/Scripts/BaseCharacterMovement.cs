@@ -26,5 +26,10 @@ public class BaseCharacterMovement : MonoBehaviour
 
         transform.Translate(movementSpeed * Time.deltaTime * movementDirection );
 
+        //Jump, make a Jump
+        //Figure out Actions for the character to do
+        //Interact with object
+        //Crouch
+        
     }
 }

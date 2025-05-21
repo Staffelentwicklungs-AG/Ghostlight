@@ -21,10 +21,10 @@ public class BaseCharacterMovement : MonoBehaviour
     private void FixedUpdate()
     {
 
-
+        //Ask Lucas for input
         var movementDirection = movementInput.x * camTransform.right + movementInput.y * Vector3.ProjectOnPlane(camTransform.forward, Vector3.up).normalized;
 
-        transform.Translate(movementDirection * Time.deltaTime * movementSpeed );
+        transform.Translate(movementSpeed * Time.deltaTime * movementDirection );
 
     }
 }

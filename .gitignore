@@ -72,3 +72,11 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+*.blend1
+*.blend2
+*.blend3
+*.blend4
+Blender_Projects/Fps_Cyber_Hand_Blender_4.4/Fps_Cyber_Hand.blend5
+*.spp
+*.assbin
+Blender_Projects/Fps_Cyber_Hand_Blender_4.4/Ghostlight_Arm_Maps/FPS Arm_Normal_OpenGL.png

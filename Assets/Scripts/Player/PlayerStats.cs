@@ -12,7 +12,7 @@ public class PlayerStats : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameObject player;
     [SerializeField] private PlayerController playerController;
-    [SerializeField] private PlayerStateMachine playerStateMachine;
+    [SerializeField] private PlayerLocomotiveStateMachine playerLocomotiveStateMachine;
     [SerializeField] private InteractionManager interactionManager;
     [SerializeField] private Camera playerCamera;
     [SerializeField] private Rigidbody rb;
@@ -24,14 +24,22 @@ public class PlayerStats : MonoBehaviour
     /// Variables are necessary for other scripts to read, these are not set in the inspector but are usually derived... and should be written as such
     /// </summary>
     [Header("Properties")]
+    // JumpForce
     [SerializeField]
     [Range(0, 500f)] private float jumpForce; // Force to apply when player jumps, be careful
+    public float JumpForce => jumpForce;
+    // WalkSpeed
     [SerializeField]
     [Range(0, 20f)] private float walkSpeed; // Speed when walking
+    public float WalkSpeed => walkSpeed;
+    // RunSpeed
     [SerializeField]
     [Range(0, 20f)] private float runSpeed; // Speed when running
+    public float RunSpeed => runSpeed;
+    // SneakSpeed
     [SerializeField]
     [Range(0, 20f)] private float sneakSpeed; // Speed when sneaking
+    public float SneakSpeed => sneakSpeed;
 
     [Header("Variables")]
     [SerializeField] private readonly float _moveSpeed; // Variable of the movement Speed that is adjusted by the states

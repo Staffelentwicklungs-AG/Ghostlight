@@ -21,11 +21,21 @@ public class PlayerStats : MonoBehaviour
     #region Properties/Variables
     /// <summary>
     /// These fields hold character capabilities that progress with development
-    /// Variables are necessary for other scripts to read
+    /// Variables are necessary for other scripts to read, these are not set in the inspector but are usually derived... and should be written as such
     /// </summary>
     [Header("Properties")]
     [SerializeField]
-    [Range(0, 500f)] private float jumpForce;
+    [Range(0, 500f)] private float jumpForce; // Force to apply when player jumps, be careful
+    [SerializeField]
+    [Range(0, 20f)] private float walkSpeed; // Speed when walking
+    [SerializeField]
+    [Range(0, 20f)] private float runSpeed; // Speed when running
+    [SerializeField]
+    [Range(0, 20f)] private float sneakSpeed; // Speed when sneaking
+
+    [Header("Variables")]
+    [SerializeField] private readonly float _moveSpeed; // Variable of the movement Speed that is adjusted by the states
+
     #endregion
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
